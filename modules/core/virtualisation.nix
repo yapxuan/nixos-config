@@ -4,9 +4,7 @@
   virtualisation = {
     libvirtd = {
       enable = true;
-      qemu = {
-        swtpm.enable = true;
-      };
+      qemu.swtpm.enable = true;
     };
     spiceUSBRedirection.enable = true;
     docker.enable = false;
@@ -18,9 +16,7 @@
     };
     #waydroid.enable = true;
   };
-  programs = {
-    virt-manager.enable = true;
-  };
+  programs.virt-manager.enable = true;
 
   environment.systemPackages = with pkgs; [
     virt-viewer # View Virtual Machines

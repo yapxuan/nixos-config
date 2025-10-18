@@ -83,9 +83,7 @@
         "512"
       ];
     };
-    gnome.gnome-keyring = {
-      enable = true;
-    };
+    gnome.gnome-keyring.enable = true;
     power-profiles-daemon.enable = true;
     envfs.enable = true;
     smartd = {
