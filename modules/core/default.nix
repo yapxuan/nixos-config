@@ -3,7 +3,7 @@
   imports = [
     #./location.nix
     #./duckdns.nix
-    ./ollama.nix
+    #./ollama.nix
     ./msmtp.nix
     ./patches.nix
     ./recorder.nix
