@@ -36,7 +36,7 @@ in
         };
       in
       [
-        #  "L+    /opt/rocm   -    -    -     -    ${rocmEnv}"
+        "L+    /opt/rocm   -    -    -     -    ${rocmEnv}"
       ];
     services.xserver.videoDrivers = [ "amdgpu" ];
   };
