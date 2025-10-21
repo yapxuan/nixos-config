@@ -21,7 +21,6 @@
     ];
 
     kernelModules = [
-      "v4l2loopback"
       "kvm-amd"
     ];
 
