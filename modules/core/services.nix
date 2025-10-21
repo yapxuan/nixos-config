@@ -110,14 +110,27 @@
     enable = true;
     writebackDevice = "/dev/nvme0n1p5";
   };
-  systemd.oomd.enable = false;
+  systemd = {
+    oomd.enable = false;
 
-  systemd.services.set-battery-threshold = {
-    description = "Set battery charge limit to 90%";
-    wantedBy = [ "multi-user.target" ];
-    serviceConfig = {
-      Type = "oneshot";
-      ExecStart = "/run/current-system/sw/bin/bash -c 'echo 90 > /sys/class/power_supply/BAT0/charge_control_end_threshold'";
+    services.set-battery-threshold = {
+      description = "Set battery charge limit to 90%";
+      wantedBy = [ "multi-user.target" ];
+      serviceConfig = {
+        Type = "oneshot";
+        ExecStart = "/run/current-system/sw/bin/bash -c 'echo 90 > /sys/class/power_supply/BAT0/charge_control_end_threshold'";
+      };
+    };
+
+    user.services."sshkey-warmup" = {
+      wantedBy = [ "default.target" ];
+      after = [ "gcr-ssh-agent.service" ];
+      serviceConfig = {
+        Type = "oneshot";
+        ExecStart = ''
+          ${pkgs.openssh}/bin/ssh -o BatchMode=yes -T git@github.com
+        '';
+      };
     };
   };
 }
