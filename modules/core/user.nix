@@ -54,7 +54,7 @@ in
   };
   nix = {
     settings = {
-      cores = 8;
+      #cores = 8;
       max-jobs = 2;
       allowed-users = [ "${username}" ];
       system-features = [
