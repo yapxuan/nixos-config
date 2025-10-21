@@ -10,19 +10,20 @@
       enable = true;
       useNetworkingTimeServers = true;
     };
-    geoipupdate = {
-      enable = true;
-      settings = {
-        AccountID = 1231707;
-        DatabaseDirectory = "/var/lib/GeoIP";
-        LicenseKey = config.age.secrets.maxmind_license_key.path;
-        EditionIDs = [
-          "GeoLite2-ASN"
-          "GeoLite2-City"
-          "GeoLite2-Country"
-        ];
-      };
-    };
+    #geoipupdate = {
+    # enable = true;
+    # settings = {
+    #   AccountID = 1231707;
+    #   DatabaseDirectory = "/var/lib/GeoIP";
+    #   LicenseKey = config.age.secrets.maxmind_license_key.path;
+    #   EditionIDs = [
+    #     "GeoLite2-ASN"
+    #     "GeoLite2-City"
+    #     "GeoLite2-Country"
+    #   ];
+    # };
+    #};
+    #onedrive.enable = true;
     fwupd.enable = true;
     btrfs.autoScrub = {
       enable = true;
@@ -50,7 +51,6 @@
       package = pkgs.ananicy-cpp;
       rulesProvider = pkgs.ananicy-rules-cachyos_git;
     };
-    #onedrive.enable = true;
     dbus = {
       implementation = "broker";
       packages = [ pkgs.gcr_4 ];
