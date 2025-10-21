@@ -67,20 +67,20 @@
     scx = {
       enable = true; # by default uses scx_rustland scheduler
       scheduler = "scx_rusty";
-      package = pkgs.scx_git.rustscheds;
+      package = pkgs.scx.rustscheds;
       extraArgs = [
         "--slice-us-underutil"
-        "30000"
+        "25000"
         "--slice-us-overutil"
-        "1500"
+        "2500"
         "--interval"
-        "1.5"
+        "1.0"
         "--direct-greedy-under"
         "70"
         "--kick-greedy-under"
         "90"
         "--perf"
-        "512"
+        "384"
       ];
     };
     gnome.gnome-keyring.enable = true;
