@@ -152,6 +152,10 @@
         enableFormat = true;
         enableTreesitter = true;
         enableExtraDiagnostics = true;
+        kotlin = {
+          enable = true;
+          lsp.enable = true;
+        };
         haskell = {
           enable = true;
           lsp = {
