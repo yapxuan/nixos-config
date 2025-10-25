@@ -157,7 +157,7 @@
           lsp.enable = true;
         };
         haskell = {
-          enable = true;
+          enable = false;
           lsp = {
             enable = true;
           };
