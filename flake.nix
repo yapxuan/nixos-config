@@ -179,10 +179,7 @@
       flake_dir = "/home/${username}/nixos-config";
       pkgs = import nixpkgs {
         inherit system;
-        config = {
-          rocmSupport = true;
-          allowUnfree = true;
-        };
+        config.allowUnfree = true;
         overlays = [
           (final: _prev: {
             animeko = final.callPackage ./pkgs/animeko { };

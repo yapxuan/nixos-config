@@ -7,5 +7,8 @@
     ../../overlay
   ];
   # Enable GPU Drivers
-  drivers.amdgpu.enable = true;
+  drivers.amdgpu = {
+    enable = true;
+    rocm.enable = false;
+  };
 }

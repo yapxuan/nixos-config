@@ -1,7 +1,6 @@
 {
   pkgs,
   inputs,
-  lib,
   ...
 }:
 {
@@ -29,22 +28,10 @@
     };
   };
   nix.package = pkgs.nixVersions.git;
-  nixpkgs = {
-    config = {
-      rocmSupport = true;
-      allowUnfree = true;
-    };
-  };
+  nixpkgs.config.allowUnfree = true;
 
-  environment = {
-    variables = {
-      HSA_OVERRIDE_GFX_VERSION = "11.0.0";
-      PATH = lib.mkAfter "/opt/rocm/bin";
-      LD_LIBRARY_PATH = lib.mkAfter "/opt/rocm/lib";
-    };
-    sessionVariables = {
-      SSH_AUTH_SOCK = "$XDG_RUNTIME_DIR/gcr/ssh";
-    };
+  environment.sessionVariables = {
+    SSH_AUTH_SOCK = "$XDG_RUNTIME_DIR/gcr/ssh";
   };
 
   environment.systemPackages = with pkgs; [
