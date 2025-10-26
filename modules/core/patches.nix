@@ -1,13 +1,6 @@
-{ pkgs, lib, ... }:
+{ lib, ... }:
 {
   boot.kernelPatches = [
-    {
-      name = "fix-clc-underflow";
-      patch = pkgs.fetchpatch {
-        url = "https://lore.kernel.org/linux-mediatek/20251009020158.1923429-1-mingyen.hsieh@mediatek.com/raw";
-        hash = "sha256-BhtGp4YliIIhrqkS09RQfZytKhQwDR3DXM8d7SCJw54=";
-      };
-    }
     /*
       {
         name = "optimized-kernel-config";
