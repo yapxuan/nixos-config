@@ -99,7 +99,6 @@
     })
     inputs.rust-overlay.overlays.default
     inputs.ghostty.overlays.default
-    inputs.prismlauncher.overlays.default
     inputs.zig.overlays.default
   ];
 }

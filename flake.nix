@@ -99,10 +99,6 @@
         flake-utils.follows = "flake-utils";
       };
     };
-    prismlauncher = {
-      url = "github:PrismLauncher/PrismLauncher?shallow=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nix-gaming = {
       url = "github:fufexan/nix-gaming?shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
