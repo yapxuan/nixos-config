@@ -45,7 +45,7 @@
           };
         };
       };
-
+      debugger.nvim-dap.ui.enable = true;
       diagnostics = {
         enable = true;
         config = {
@@ -152,15 +152,9 @@
         enableFormat = true;
         enableTreesitter = true;
         enableExtraDiagnostics = true;
-        kotlin = {
-          enable = true;
-          lsp.enable = true;
-        };
         haskell = {
           enable = false;
-          lsp = {
-            enable = true;
-          };
+          lsp.enable = true;
         };
         nix = {
           enable = true;
@@ -186,6 +180,7 @@
           enable = true;
           cHeader = true;
           lsp.enable = true;
+          dap.enable = true;
         };
         zig = {
           enable = true;
