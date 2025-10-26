@@ -23,9 +23,7 @@
     fuse.userAllowOther = true;
     trippy.enable = true;
     #adb.enable = true;
-    gnupg.agent = {
-      enable = true;
-    };
+    gnupg.agent.enable = true;
   };
   nix.package = pkgs.nixVersions.git;
   nixpkgs.config.allowUnfree = true;
