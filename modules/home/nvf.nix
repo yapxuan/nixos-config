@@ -217,15 +217,12 @@
           enable = true;
           lsp = {
             enable = true;
-            package = pkgs.rust-bin.selectLatestNightlyWith (
-              toolchain:
-              toolchain.default.override {
-                extensions = [
-                  "rust-analyzer"
-                  "rust-src"
-                ];
-              }
-            );
+            package = pkgs.rust-bin.stable.latest.default.override {
+              extensions = [
+                "rust-analyzer"
+                "rust-src"
+              ];
+            };
             opts = ''
               ['rust-analyzer'] = {
                 cargo = {allFeature = true},

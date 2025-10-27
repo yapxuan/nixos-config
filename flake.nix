@@ -264,15 +264,13 @@
             })
           ];
           nativeBuildInputs = [
-            (pkgs.rust-bin.selectLatestNightlyWith (
-              toolchain: toolchain.default
-              #.override {
-              #  extensions = [
-              #   "llvm-tools"
-              #   "rust-src"
-              # ];
-              #}
-            ))
+            pkgs.rust-bin.stable.latest.default
+            #.override {
+            #  extensions = [
+            #   "llvm-tools"
+            #   "rust-src"
+            # ];
+            #}
           ];
         };
       };
