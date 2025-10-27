@@ -9,7 +9,7 @@ let
 in
 {
   imports = [ ragenix.nixosModules.default ];
-  environment.systemPackages = [ inputs.ragenix.packages.${pkgs.system}.default ];
+  environment.systemPackages = [ inputs.ragenix.packages.${pkgs.stdenv.hostPlatform.system}.default ];
   age = {
     ageBin = "${pkgs.rage}/bin/rage";
     # if you changed this key, you need to regenerate all encrypt files from the decrypt contents!

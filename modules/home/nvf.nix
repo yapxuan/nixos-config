@@ -4,7 +4,6 @@
   flake_dir,
   inputs,
   host,
-  system,
   ...
 }:
 {
@@ -186,7 +185,7 @@
           enable = true;
           lsp = {
             enable = true;
-            package = inputs.zls.packages.${system}.zls;
+            package = inputs.zls.packages.${pkgs.stdenv.hostPlatform.system}.zls;
           };
         };
         go = {

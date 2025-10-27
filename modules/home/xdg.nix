@@ -12,8 +12,10 @@
     };
     portal = {
       enable = lib.mkForce true;
-      extraPortals = [ inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland ];
-      configPackages = [ inputs.hyprland.packages.${pkgs.system}.hyprland ];
+      extraPortals = [
+        inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland
+      ];
+      configPackages = [ inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland ];
     };
   };
 }

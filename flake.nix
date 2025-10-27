@@ -186,16 +186,16 @@
       };
     in
     {
-      packages.${system} = {
+      packages.${pkgs.stdenv.hostPlatform.system} = {
         inherit (pkgs) animeko;
       };
       templates.treefmt = {
         path = ./templates/treefmt;
         description = "Minimal treefmt-nix";
       };
-      formatter.${system} = treefmt-nix.lib.mkWrapper pkgs ./treefmt.nix;
-      checks.${system} = {
-        treefmt = self.formatter.${system};
+      formatter.${pkgs.stdenv.hostPlatform.system} = treefmt-nix.lib.mkWrapper pkgs ./treefmt.nix;
+      checks.${pkgs.stdenv.hostPlatform.system} = {
+        treefmt = self.formatter.${pkgs.stdenv.hostPlatform.system};
       };
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
@@ -206,7 +206,6 @@
               username
               host
               flake_dir
-              system
               ;
             profile = "amd";
           };
@@ -215,7 +214,7 @@
           ];
         };
       };
-      devShells.${system} = {
+      devShells.${pkgs.stdenv.hostPlatform.system} = {
         ts = pkgs.mkShell {
           nativeBuildInputs = [ pkgs.bun ];
         };
