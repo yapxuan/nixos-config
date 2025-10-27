@@ -2,7 +2,7 @@
 {
   fonts = {
     packages = with pkgs; [
-      noto-fonts-emoji
+      noto-fonts-color-emoji
       noto-fonts-cjk-sans
       font-awesome
       #symbola  Fails to build 7/16/25 waiting on fix
