@@ -152,7 +152,11 @@
         enableTreesitter = true;
         enableExtraDiagnostics = true;
         haskell = {
-          enable = false;
+          enable = true;
+          lsp.enable = false;
+        };
+        bash = {
+          enable = true;
           lsp.enable = true;
         };
         nix = {
