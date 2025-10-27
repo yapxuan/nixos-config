@@ -74,14 +74,14 @@
         bindkey "\ek" up-line-or-history
         bindkey "\el" forward-word
         nix() {
-          case "$1" in
-            shell|develop|build)
-              nom "$@"
-              ;;
-            *)
-              command nix "$@"
-              ;;
-          esac
+                case "$1" in
+                shell | develop | build)
+                        nom "$@"
+                        ;;
+                *)
+                        command nix "$@"
+                        ;;
+                esac
         }
       '';
 
@@ -92,7 +92,6 @@
         f = "c && fastfetch";
         fr = "nh os switch";
         ncg = "nh clean all";
-        cat = "bat";
         man = "batman";
         curl = "curlie";
         nix-shell = "nom-shell";
