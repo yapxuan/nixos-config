@@ -28,7 +28,7 @@
       };
     };
     stylix = {
-      url = "github:danth/stylix/master?shallow=1";
+      url = "github:nix-community/stylix/master?shallow=1";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         flake-parts.follows = "flake-parts";
