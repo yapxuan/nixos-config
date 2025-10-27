@@ -1,6 +1,5 @@
 {
   pkgs,
-  inputs,
   ...
 }:
 let
@@ -11,7 +10,7 @@ in
 {
   programs.yazi = {
     enable = true;
-    package = inputs.yazi.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
+    package = pkgs.yazi.override {
       _7zz = pkgs._7zz-rar;
     };
     enableZshIntegration = true;
