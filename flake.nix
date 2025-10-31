@@ -73,7 +73,7 @@
     zig = {
       #block untill https://github.com/zigtools/zls/pull/2457 merged
       #url = "github:silversquirl/zig-flake?shallow=1";
-      url = "github:mitchellh/zig-overlay?shallow=1";
+      url = "github:mitchellh/zig-overlay/ae1fddbb9bce72065b67331efff583651bd1b123?shallow=1";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         flake-compat.follows = "";
