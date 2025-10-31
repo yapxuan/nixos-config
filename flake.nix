@@ -173,22 +173,15 @@
       host = "nixos";
       username = "puiyq";
       flake_dir = "/home/${username}/nixos-config";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-        overlays = [
-          (final: _prev: {
-            animeko = final.callPackage ./pkgs/animeko { };
-          })
+      pkgs = nixpkgs.legacyPackages.${system}.extend (
+        final: prev:
+        (nixpkgs.lib.composeManyExtensions [
           rust-overlay.overlays.default
           zig.overlays.default
-        ];
-      };
+        ] final prev)
+      );
     in
     {
-      packages.${pkgs.stdenv.hostPlatform.system} = {
-        inherit (pkgs) animeko;
-      };
       templates.treefmt = {
         path = ./templates/treefmt;
         description = "Minimal treefmt-nix";
@@ -199,7 +192,6 @@
       };
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
-          inherit system;
           specialArgs = {
             inherit
               inputs

@@ -96,6 +96,7 @@
             );
         }
       );
+      animeko = final.callPackage ../pkgs/animeko { };
     })
     inputs.rust-overlay.overlays.default
     inputs.ghostty.overlays.default
