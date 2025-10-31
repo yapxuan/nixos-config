@@ -56,7 +56,6 @@
       "efs" # Extent File System
       "erofs" # Enhanced Read-Only File System
       "exofs" # EXtended Object File System
-      "f2fs" # Flash-Friendly File System
       "freevxfs" # Veritas filesystem driver
       "gfs2" # Global File System 2
       "hfs" # Hierarchical File System (Macintosh)
