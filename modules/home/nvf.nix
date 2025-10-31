@@ -13,6 +13,10 @@
     enable = true;
 
     settings.vim = {
+      theme = {
+        enable = true;
+        name = "dracula";
+      };
       lsp.enable = true;
       vimAlias = true;
       viAlias = true;
@@ -265,7 +269,6 @@
 
       statusline.lualine = {
         enable = true;
-        theme = "base16";
       };
 
       autopairs.nvim-autopairs.enable = true;
