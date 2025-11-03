@@ -136,7 +136,7 @@
       };
     };
     mysecrets = {
-      url = "git+ssh://git@github.com/yapxuan/nix-secret.git?shallow=1";
+      url = "git+ssh://git@github.com/puiyq/nix-secret.git?shallow=1";
       flake = false;
     };
 
