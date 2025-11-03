@@ -5413,10 +5413,10 @@
   "org/openani/anitorrent/catalog/0.2.0/catalog-0.2.0": {
    "toml": "sha256-3yKg8yGXTxBzOV2CstWaymNc11DvlO4E6h9zXzQZ9Nw="
   },
-  "org/openani/jsystemthemedetector#jSystemThemeDetector/3.8": {
-   "jar": "sha256-X/eFF2nvc9yE+f6sNFteBOzgDEaMgTl4HIhUEZxPB+E=",
-   "module": "sha256-tNPURyLcLU+zp0XR3bPrI2KkCTxbwyQFXPR2947iSbs=",
-   "pom": "sha256-A9Q+KKmVsrk+45mKFLodgLiJsyAbdvV5ZlKhNzhDIBk="
+  "org/openani/jsystemthemedetector#jSystemThemeDetector/3.9": {
+   "jar": "sha256-ieTv4x81u+I+yjexpNrlMg3XX2c3w3O7X0B5Dm9jwvo=",
+   "module": "sha256-s+NvC4F8sW43udNc2Sf7pqQYPTpy6WYcDaEZtGe1U5Y=",
+   "pom": "sha256-EN0WnADat5JXw6z/58I2vqwkgfngp2xT620S9Mp1q2c="
   },
   "org/openani/mediamp#catalog/0.0.29": {
    "module": "sha256-s6r4l6CUxAxXNrk0x4papHn7CT9Agn+VGhA5gde45/8=",
