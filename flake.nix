@@ -7,6 +7,8 @@
     determinate = {
       url = "github:DeterminateSystems/determinate";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.determinate-nixd-aarch64-linux.follows = "";
+      inputs.determinate-nixd-aarch64-darwin.follows = "";
       inputs.nix = {
         url = "github:DeterminateSystems/nix-src?shallow=1";
         inputs = {
