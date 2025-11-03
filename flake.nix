@@ -4,6 +4,17 @@
   inputs = {
     # Core dependencies
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable?shallow=1";
+    determinate = {
+      url = "github:DeterminateSystems/determinate";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nix = {
+        url = "github:DeterminateSystems/nix-src?shallow=1";
+        inputs = {
+          nixpkgs.follows = "nixpkgs";
+          flake-parts.follows = "flake-parts";
+        };
+      };
+    };
 
     # Placeholders
     flake-utils.follows = "yazi/flake-utils";

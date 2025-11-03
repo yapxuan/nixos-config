@@ -37,5 +37,6 @@
     inputs.ragenix.nixosModules.default
     #inputs.lix-module.nixosModules.default
     inputs.nix-gaming.nixosModules.pipewireLowLatency
+    inputs.determinate.nixosModules.default
   ];
 }

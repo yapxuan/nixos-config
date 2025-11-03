@@ -25,7 +25,7 @@
     #adb.enable = true;
     gnupg.agent.enable = true;
   };
-  nix.package = pkgs.nixVersions.git;
+  #nix.package = pkgs.nixVersions.git;
   nixpkgs.config.allowUnfree = true;
 
   environment.sessionVariables = {
